@@ -3,14 +3,13 @@ function insertionSort(arr) {
     const key = arr[i];
     const j = i - 1;
 
-    while (i >= 0 && arr[j] > key) {
+    while (j >= 0 && arr[j] > key) {
       arr[j + 1] = arr[j];
       j--;
     }
 
     arr[j + 1] = key;
   }
-
   return arr;
 }
 

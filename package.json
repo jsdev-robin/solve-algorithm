@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon 02-insertion_sort.js"
+    "dev": "nodemon 03-quick_sort.js"
   },
   "keywords": [],
   "author": "",
