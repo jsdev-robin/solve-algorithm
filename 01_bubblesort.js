@@ -1,5 +1,5 @@
-function bubbleSort(arr) {
-  for (let i = 0; i < arr.length; i++) {
+function bubblesort(arr) {
+  for (let i = 0; i < arr.length - 1; i++) {
     for (let j = 0; j < arr.length - i - 1; j++) {
       if (arr[j] > arr[j + 1]) {
         const temp = arr[j];
@@ -12,6 +12,4 @@ function bubbleSort(arr) {
   return arr;
 }
 
-const arr = [34, 12, 87, 45, 23, 67, 3, 91, 10, 56];
-
-console.log(bubbleSort(arr));
+console.log(bubblesort([3, 20, 1, 6, 8, 2, 9, 1, 10, 9, 7]));
