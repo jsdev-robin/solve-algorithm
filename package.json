@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon dsa_algo_countingsort.js"
+    "dev": "nodemon dsa_algo_radixsort.js"
   },
   "keywords": [],
   "author": "",
