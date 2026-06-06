@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon dsa_algo_radixsort.js"
+    "dev": "nodemon dsa_hashtables.js"
   },
   "keywords": [],
   "author": "",
