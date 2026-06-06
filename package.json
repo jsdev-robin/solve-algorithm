@@ -4,8 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dsa_algo_linearsearch": "nodemon dsa_algo_linearsearch.js",
+    "dsa_algo_binarysearch": "nodemon dsa_algo_binarysearch.js",
     "dsa_algo_bubblesort": "nodemon dsa_algo_bubblesort.js",
-    "dsa_algo_linearsearch": "nodemon dsa_algo_linearsearch.js"
+    "dsa_algo_selectionsort": "nodemon dsa_algo_selectionsort.js",
+    "dsa_algo_insertionsort": "nodemon dsa_algo_insertionsort.js",
+    "dsa_algo_quicksort": "nodemon dsa_algo_quicksort.js",
+    "dsa_algo_countingsort": "nodemon dsa_algo_countingsort.js",
+    "dsa_algo_radixsort": "nodemon dsa_algo_radixsort.js",
+    "dsa_algo_mergesort": "nodemon dsa_algo_mergesort.js"
   },
   "keywords": [],
   "author": "",
