@@ -12,13 +12,13 @@ var topKFrequent = function (nums, k) {
 
   const buckets = Array.from({ length: nums.length }, () => []);
 
-  for (let [key, count] of freq) {
-    buckets[count].push(key);
+  for (let [key, value] of freq) {
+    buckets[value].push(key);
   }
 
   let result = [];
 
-  for (let i = buckets.length - 1; i >= 0 && result.length < k; i--) {
+  for (let i = buckets.length - 1; i >= 0 && result.length < 2; i--) {
     result.push(...buckets[i]);
   }
 
