@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon dsa_algo_bubblesort.js"
+    "dsa_algo_bubblesort": "nodemon dsa_algo_bubblesort.js",
+    "dsa_algo_linearsearch": "nodemon dsa_algo_linearsearch.js"
   },
   "keywords": [],
   "author": "",
