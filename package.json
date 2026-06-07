@@ -13,8 +13,11 @@
     "dsa_algo_countingsort": "nodemon dsa_algo_countingsort.js",
     "dsa_algo_radixsort": "nodemon dsa_algo_radixsort.js",
     "dsa_algo_mergesort": "nodemon dsa_algo_mergesort.js",
+    "two-pointers": "nodemon two-pointers.js",
     "d-1-topKFrequent": "nodemon d-1-topKFrequent.js",
-    "d-1-encode-and-decode-strings": "nodemon d-1-encode-and-decode-strings.js"
+    "d-1-encode-and-decode-strings": "nodemon d-1-encode-and-decode-strings.js",
+    "d-2-valid-palindrome": "nodemon d-2-valid-palindrome.js",
+    "d-2-3sum": "nodemon d-2-3sum.js"
   },
   "keywords": [],
   "author": "",
