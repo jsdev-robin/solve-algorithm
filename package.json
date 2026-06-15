@@ -18,7 +18,11 @@
     "d-1-encode-and-decode-strings": "nodemon d-1-encode-and-decode-strings.js",
     "d-2-valid-palindrome": "nodemon d-2-valid-palindrome.js",
     "d-2-3sum": "nodemon d-2-3sum.js",
-    "sliding-window": "nodemon sliding-window.js"
+    "sliding-window": "nodemon sliding-window.js",
+    "stack": "nodemon stack.js",
+    "stack-containsDuplicate": "nodemon stack-containsDuplicate.js",
+    "stack-calPoints": "nodemon stack-calPoints.js",
+    "stack-removeDuplicates": "nodemon stack-removeDuplicates.js"
   },
   "keywords": [],
   "author": "",

@@ -173,3 +173,18 @@ function longestKDistinct(s, k) {
 }
 
 console.log(longestKDistinct('araaci', 2)); // 4
+
+console.log('Problem 9 — Sliding Window Maximum');
+function maxSlidingWindow(nums, k) {
+  let result = [];
+
+  for (let left = 0; left <= nums.length - k; left++) {
+    const window = nums.slice(left, left + k);
+    result.push(Math.max(...window));
+  }
+
+  return result;
+}
+
+console.log(maxSlidingWindow([1, 3, -1, -3, 5, 3, 6, 7], 3));
+// [3, 3, 5, 5, 6, 7]
