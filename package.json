@@ -11,7 +11,8 @@
     "stack-my_queue": "nodemon stack-my_queue.js",
     "stack-min_stack": "nodemon stack-min_stack.js",
     "stack-daily_temperatures": "nodemon stack-daily_temperatures.js",
-    "stack-next_greater_element": "nodemon stack-next_greater_element.js"
+    "stack-next_greater_element": "nodemon stack-next_greater_element.js",
+    "stack-evalRPN": "nodemon stack-evalRPN.js"
   },
   "keywords": [],
   "author": "",
