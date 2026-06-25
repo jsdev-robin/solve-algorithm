@@ -13,7 +13,9 @@
     "stack-daily_temperatures": "nodemon stack-daily_temperatures.js",
     "stack-next_greater_element": "nodemon stack-next_greater_element.js",
     "stack-evalRPN": "nodemon stack-evalRPN.js",
-    "queue": "nodemon queue.js"
+    "queue": "nodemon queue.js",
+    "queue-mystack": "nodemon queue-mystack.js",
+    "queue-my_circular_queue": "nodemon queue-my_circular_queue.js"
   },
   "keywords": [],
   "author": "",
