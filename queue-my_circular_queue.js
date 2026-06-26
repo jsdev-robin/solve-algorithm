@@ -32,9 +32,9 @@ class MyCircularQueue {
   }
 
   Rear() {
-    if (this.isEmpty()) return -1;
-    let rear = (this.front + this.count - 1) % this.size;
-    return this.queue[rear];
+    return this.isEmpty()
+      ? -1
+      : this.queue[(this.front + this.count - 1) % this.size];
   }
 
   isEmpty() {
@@ -53,3 +53,14 @@ console.log(cq.enQueue(3)); // true
 console.log(cq.enQueue(4)); // false
 console.log(cq.deQueue()); // true
 console.log(cq.enQueue(4)); // true
+
+// size = 3
+// enQueue(1) → true
+// enQueue(2) → true
+// enQueue(3) → true
+// enQueue(4) → false (full)
+// deQueue()  → true (1 বের হলো)
+// enQueue(4) → true (জায়গা হয়েছে)
+
+// circular মানে: পিছনের index শেষে পৌঁছালে শুরুতে ঘুরে যায়
+// এতে array এর জায়গা পুনরায় ব্যবহার হয়

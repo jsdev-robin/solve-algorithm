@@ -15,7 +15,9 @@
     "stack-evalRPN": "nodemon stack-evalRPN.js",
     "queue": "nodemon queue.js",
     "queue-mystack": "nodemon queue-mystack.js",
-    "queue-my_circular_queue": "nodemon queue-my_circular_queue.js"
+    "queue-my_circular_queue": "nodemon queue-my_circular_queue.js",
+    "queue-recent_counter": "nodemon queue-recent_counter.js",
+    "queue-moving_average": "nodemon queue-moving_average.js"
   },
   "keywords": [],
   "author": "",
