@@ -17,7 +17,9 @@
     "queue-mystack": "nodemon queue-mystack.js",
     "queue-my_circular_queue": "nodemon queue-my_circular_queue.js",
     "queue-recent_counter": "nodemon queue-recent_counter.js",
-    "queue-moving_average": "nodemon queue-moving_average.js"
+    "queue-moving_average": "nodemon queue-moving_average.js",
+    "queue-time_required_to_buy": "nodemon queue-time_required_to_buy.js",
+    "queue-max_sliding_window": "nodemon queue-max_sliding_window.js"
   },
   "keywords": [],
   "author": "",
