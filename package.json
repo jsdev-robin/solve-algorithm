@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "array_maxProfit": "nodemon array_maxProfit.js",
     "array_twoSum": "nodemon array_twoSum.js"
   },
   "keywords": [],
