@@ -4,22 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "stack-valid_parentheses": "nodemon stack-valid_parentheses.js",
-    "stack-baseball_game": "nodemon stack-baseball_game.js",
-    "stack-remove_duplicates": "nodemon stack-remove_duplicates.js",
-    "stack-backspace_compare": "nodemon stack-backspace_compare.js",
-    "stack-my_queue": "nodemon stack-my_queue.js",
-    "stack-min_stack": "nodemon stack-min_stack.js",
-    "stack-daily_temperatures": "nodemon stack-daily_temperatures.js",
-    "stack-next_greater_element": "nodemon stack-next_greater_element.js",
-    "stack-evalRPN": "nodemon stack-evalRPN.js",
-    "queue": "nodemon queue.js",
-    "queue-mystack": "nodemon queue-mystack.js",
-    "queue-my_circular_queue": "nodemon queue-my_circular_queue.js",
-    "queue-recent_counter": "nodemon queue-recent_counter.js",
-    "queue-moving_average": "nodemon queue-moving_average.js",
-    "queue-time_required_to_buy": "nodemon queue-time_required_to_buy.js",
-    "queue-max_sliding_window": "nodemon queue-max_sliding_window.js"
+    "array_twoSum": "nodemon array_twoSum.js"
   },
   "keywords": [],
   "author": "",
