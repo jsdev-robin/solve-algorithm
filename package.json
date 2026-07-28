@@ -4,9 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "array_maxSubArray": "nodemon array_maxSubArray.js",
-    "array_containsDuplicate": "nodemon array_containsDuplicate.js",
+    "array_getRow": "nodemon array_getRow.js",
     "array_maxProfit": "nodemon array_maxProfit.js",
+    "array_plusOne": "nodemon array_plusOne.js",
+    "array_maxSubArray": "nodemon array_maxSubArray.js",
+    "array_searchInsert": "nodemon array_searchInsert.js",
+    "array_removeElement": "nodemon array_removeElement.js",
+    "array_removeDuplicates": "nodemon array_removeDuplicates.js",
     "array_twoSum": "nodemon array_twoSum.js"
   },
   "keywords": [],
