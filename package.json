@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "array_intersect": "nodemon array_intersect.js",
+    "array_rotate": "nodemon array_rotate.js",
     "array_getRow": "nodemon array_getRow.js",
     "array_maxProfit": "nodemon array_maxProfit.js",
     "array_plusOne": "nodemon array_plusOne.js",
@@ -11,7 +13,8 @@
     "array_searchInsert": "nodemon array_searchInsert.js",
     "array_removeElement": "nodemon array_removeElement.js",
     "array_removeDuplicates": "nodemon array_removeDuplicates.js",
-    "array_twoSum": "nodemon array_twoSum.js"
+    "array_twoSum": "nodemon array_twoSum.js",
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
