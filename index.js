@@ -1,10 +1,7 @@
-function intersection(nums1, nums2) {
-  let a = new Set(nums1);
-  let b = new Set(nums2);
-
-  const x = [...a.intersection(b)];
-
-  console.log(x);
+const nums1 = [1, 2, 2, 1];
+const map = new Map();
+for (const n of nums1) {
+  map.set(n, (map.get(n) || 0) + 1);
 }
 
-console.log(intersection([1, 2, 2, 1], [2, 2]));
+console.log(map);
