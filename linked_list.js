@@ -39,8 +39,8 @@ class LinkedList {
       }
 
       curr.next = newNode;
-      this.size++;
     }
+    this.size++;
   }
 
   prepend(data) {
