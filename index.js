@@ -30,15 +30,14 @@ class LinkedList {
 
   append(data) {
     let newNode = new Node(data);
-
     if (!this.head) {
       this.head = newNode;
     } else {
       let curr = this.head;
-
       while (curr.next) {
         curr = curr.next;
       }
+
       curr.next = newNode;
     }
 
@@ -54,7 +53,7 @@ class LinkedList {
 
   insertAt(data, index) {
     if (index < 0 || index > this.size) {
-      console.log('Invalid Index');
+      console.log('Invalid index');
       return;
     }
 
@@ -90,6 +89,124 @@ class LinkedList {
 
   removeLast() {
     if (!this.head) return null;
+    if (!this.head.next) {
+      let removed = this.head;
+      this.head = null;
+      this.size--;
+      return removed.data;
+    }
+
+    let curr = this.head;
+    let prev = null;
+
+    while (curr.next) {
+      prev = curr;
+      curr = curr.next;
+    }
+
+    prev.next = null;
+    this.size--;
+    return curr.data;
+  }
+
+  remvoeAt(index) {
+    if (index < 0 || index >= this.size) {
+      console.log('Invalid index');
+      return null;
+    }
+
+    if (index === 0) return this.removeFirst();
+
+    let curr = this.head;
+    let prev = null;
+    let i = 0;
+
+    while (i < index) {
+      prev = curr;
+      curr = curr.next;
+      i++;
+    }
+
+    prev.next = curr.next;
+    this.size--;
+    return curr.data;
+  }
+
+  find(data) {
+    let curr = this.head;
+    let index = 0;
+    while (curr) {
+      if (curr.data === data) return index;
+      curr = curr.next;
+      index++;
+    }
+    return -1;
+  }
+
+  min() {
+    if (!this.head) return null;
+    let curr = this.head;
+    let res = this.head.data;
+
+    while (curr) {
+      res = Math.min(res, curr.data);
+      curr = curr.next;
+    }
+
+    return res;
+  }
+
+  max() {
+    if (!this.head) return null;
+    let curr = this.head;
+    let res = this.head.data;
+
+    while (curr) {
+      res = Math.max(res, curr.data);
+      curr = curr.next;
+    }
+
+    return res;
+  }
+
+  sum() {
+    if (!this.head) return null;
+    let curr = this.head;
+    let res = 0;
+
+    while (curr) {
+      res += curr.data;
+      curr = curr.next;
+    }
+
+    return res;
+  }
+
+  average() {
+    if (!this.head) return null;
+    let curr = this.head;
+    let res = 0;
+
+    while (curr) {
+      res += curr.data;
+      curr = curr.next;
+    }
+
+    return res / this.size;
+  }
+
+  reverse() {
+    let prev = null;
+    let curr = this.head;
+
+    while (curr) {
+      let next = curr.next;
+      curr.next = prev;
+      prev = curr;
+      curr = next;
+    }
+
+    this.head = prev;
   }
 }
 const list = new LinkedList();
@@ -100,7 +217,12 @@ list.append(30);
 list.append(40);
 list.append(50);
 list.prepend(5);
-list.insertAt(40, 5);
-console.log(list.removeFrist());
+list.insertAt(60, 5);
+list.reverse();
+
+console.log(list.min());
+console.log(list.max());
+console.log(list.sum());
+console.log(list.average());
 
 list.printList();
