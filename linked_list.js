@@ -8,6 +8,7 @@ class Node {
 class LinkedList {
   constructor() {
     this.head = null;
+    this.tail = null;
     this.size = 0;
   }
 
@@ -30,23 +31,27 @@ class LinkedList {
 
   append(data) {
     const newNode = new Node(data);
+
     if (!this.head) {
       this.head = newNode;
+      this.tail = newNode;
     } else {
-      let curr = this.head;
-      while (curr.next) {
-        curr = curr.next;
-      }
-
-      curr.next = newNode;
+      this.tail.next = newNode;
+      this.tail = newNode;
     }
+
     this.size++;
   }
 
   prepend(data) {
-    let newNode = new Node(data);
+    const newNode = new Node(data);
+
     newNode.next = this.head;
     this.head = newNode;
+
+    if (!this.tail) {
+      this.tail = newNode;
+    }
 
     this.size++;
   }
@@ -62,7 +67,12 @@ class LinkedList {
       return;
     }
 
-    let newNode = new Node(data);
+    if (index === this.size) {
+      this.append(data);
+      return;
+    }
+
+    const newNode = new Node(data);
     let curr = this.head;
     let prev = null;
     let i = 0;
@@ -75,48 +85,67 @@ class LinkedList {
 
     newNode.next = curr;
     prev.next = newNode;
+
     this.size++;
   }
 
-  removeFrist() {
+  removeFirst() {
     if (!this.head) return null;
 
     const removed = this.head;
     this.head = this.head.next;
+
+    if (!this.head) {
+      this.tail = null;
+    }
+
     this.size--;
+
     return removed.data;
   }
 
   removeLast() {
     if (!this.head) return null;
 
-    if (!this.head.next) {
+    if (this.head === this.tail) {
       const removed = this.head;
+
       this.head = null;
+      this.tail = null;
       this.size--;
+
       return removed.data;
     }
 
     let curr = this.head;
-    let prev = null;
 
-    while (curr.next) {
-      prev = curr;
+    while (curr.next !== this.tail) {
       curr = curr.next;
     }
 
-    prev.next = null;
+    const removed = this.tail;
+
+    curr.next = null;
+    this.tail = curr;
+
     this.size--;
-    return curr.data;
+
+    return removed.data;
   }
 
-  remvoeAt(index) {
+  removeAt(index) {
     if (index < 0 || index >= this.size) {
       console.log('Invalid index');
       return null;
     }
 
-    if (index === 0) return this.removeFirst();
+    if (index === 0) {
+      return this.removeFirst();
+    }
+
+    if (index === this.size - 1) {
+      return this.removeLast();
+    }
 
     let curr = this.head;
     let prev = null;
@@ -130,22 +159,27 @@ class LinkedList {
 
     prev.next = curr.next;
     this.size--;
+
     return curr.data;
   }
 
   find(data) {
     let curr = this.head;
     let index = 0;
+
     while (curr) {
       if (curr.data === data) return index;
+
       curr = curr.next;
       index++;
     }
+
     return -1;
   }
 
   min() {
     if (!this.head) return null;
+
     let curr = this.head;
     let min = curr.data;
 
@@ -153,6 +187,7 @@ class LinkedList {
       if (curr.data < min) {
         min = curr.data;
       }
+
       curr = curr.next;
     }
 
@@ -160,6 +195,8 @@ class LinkedList {
   }
 
   max() {
+    if (!this.head) return null;
+
     let curr = this.head;
     let max = curr.data;
 
@@ -177,6 +214,7 @@ class LinkedList {
   sum() {
     let curr = this.head;
     let sum = 0;
+
     while (curr) {
       sum += curr.data;
       curr = curr.next;
@@ -187,10 +225,8 @@ class LinkedList {
 
   average() {
     if (this.size === 0) return null;
-    const total = this.sum();
-    const length = this.size;
 
-    return total / length;
+    return this.sum() / this.size;
   }
 
   toArray() {
@@ -209,6 +245,8 @@ class LinkedList {
     let prev = null;
     let curr = this.head;
 
+    this.tail = this.head;
+
     while (curr) {
       let next = curr.next;
       curr.next = prev;
@@ -218,10 +256,12 @@ class LinkedList {
 
     this.head = prev;
   }
+
   getSize() {
     return this.size;
   }
 }
+
 const list = new LinkedList();
 
 list.append(10);
@@ -229,6 +269,7 @@ list.append(20);
 list.append(30);
 list.append(40);
 list.append(50);
+
 console.log(list.min());
 console.log(list.max());
 console.log(list.sum());
